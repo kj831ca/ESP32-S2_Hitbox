@@ -8,9 +8,8 @@ I build my own Hitbox Joystick and wrote the firmware ESP32 S2. The normal polli
 I'm using ESP-IDF V5.0 as a compiler. 
 
 
-┌─────────────────────────────────┐
-│Button Mapp                      │
-├───────────────────┬─────────────┤
+│ Function          | GPIO Num    │
+| ------------------|:-----------:|
 │UP                 │ GPIO 1      │
 ├───────────────────┼─────────────┤
 │RIGHT              │ GPIO 2      │

@@ -7,6 +7,11 @@ I build my own Hitbox Joystick and wrote the firmware ESP32 S2. The normal polli
 
 I'm using ESP-IDF V5.0 as a compiler. 
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 │ Function          | GPIO Num    │
 | ------------------|:-----------:|

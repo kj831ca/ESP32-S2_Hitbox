@@ -13,8 +13,8 @@ I'm using ESP-IDF V5.0 as a compiler.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-│ Function          | GPIO Number │
-| ----------------- |:-----------:|
-│ UP                │      1      │
-│ RIGHT             │      2      │
-
+| Tables        | Are           |
+| ------------- |:-------------:|
+| col 3 is      | right-aligned |
+| col 2 is      | centered      |
+| zebra stripes | are neat      |

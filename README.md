@@ -18,3 +18,16 @@ I'm using ESP-IDF V5.0 as a compiler.
 | UP            | 1             |
 | RIGHT         | 2             |
 | DOWN          | 3             |
+| LEFT          | 4             |
+| Button 1      | 5             |
+| Button 2      | 6             |
+| Button 3      | 7             |
+| Button 4      | 8             |
+| Button 5      | 9             |
+| Button 6      | 10            |
+| Button 7      | 11            |
+| Button 8      | 12            |
+| Button 9      | 13            |
+| Button 10     | 14            |
+| Button 11     | 15            |
+

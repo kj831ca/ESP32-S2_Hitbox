@@ -20,12 +20,11 @@ python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 4
 # SOCD Function
 The firmware handle the SOCD as follow:
 
-| SOCD                               |
 | Combination         | Output       |
 | :------------:      | ------------ |
 | LEFT + RIGHT        | Natural      |
 | UP + DOWN           | UP           |
-| UP,DOWN,LEFT,RIGHT  | Natural      |
+| UP+DOWN+LEFT+RIGHT  | Natural      |
 
 # Connection PINs
 

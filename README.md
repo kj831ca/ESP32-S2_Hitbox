@@ -5,9 +5,17 @@
 
 I build my own Hitbox Joystick and wrote the firmware ESP32S2 Mini board. The normal polling rate of Joystick is around 250Hz (4 milli seconds) with ESP32 S2 I can do close to 1000 Hz which is 1 msec. 
 
-The compiler for this project is ESP-IDF 5.0. I found that it is a little bit tricky to compile or build the project at first time. There are the BIN files that allow you to flash to ESP32S2 Mini board under /firmware_binary . Here is the command to flash ESP32 S2, you will need to locate the folder where 'esptool.py' is
+The compiler for this project is ESP-IDF 5.0. I found that it is a little bit tricky to compile or build the project at first time. There are the BIN files that allow you to flash to ESP32S2 Mini board under /firmware_binary . Here are the steps to flash the ROM image to the ESP32S2 Mini.
 
-python.exe $env:IDF_PATH\components\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s2  write_flash --flash_mode dio --flash_size 2MB --flash_freq 80m 0x1000 .\bootloader.bin 0x8000 .\partition-table.bin 0x10000 .\esp32s2_hitbox.bin
+1. Install Visual Studio Code with Espressif IDF plug in.
+2. Open the project folder.
+3. Run the ESP-IDF Terminal locate on the bottom status bar of Visual Studio code.
+4. Connect ESP32S2 Mini into the computer. For Windows, open Device manager, hold ESP32S2 Mini both RST and 0 buttons, then release RST while you still pressing 0 buttons then release 0 button. If you do correctly there should be another  Serial Port show up on your Windows. 
+5. Go to firmware_binary and run the below command. Replace the (PORT) with the COM port name shown on your PC.
+
+python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s2  write_flash --flash_mode dio --flash_size 2MB --flash_freq 80m 0x1000 .\bootloader.bin 0x8000 .\partition-table.bin 0x10000 .\esp32s2_hitbox.bin
+
+6. Press and release RST button on ESP32S2 Mini. Run "Set up USB Game Controller", there should be 'SOI14 USB Hitbox" controller show up on your Installed game controller.
 
 
 | Button        | GPIO Number   |

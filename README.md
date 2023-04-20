@@ -15,7 +15,7 @@ The compiler for this project is ESP-IDF 5.0. I found that it is a little bit tr
 
 python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s2  write_flash --flash_mode dio --flash_size 2MB --flash_freq 80m 0x1000 .\bootloader.bin 0x8000 .\partition-table.bin 0x10000 .\esp32s2_hitbox.bin
 
-6. Press and release RST button on ESP32S2 Mini. Run "Set up USB Game Controller", there should be 'SOI14 USB Hitbox" controller show up on your Installed game controller.
+6. Reset the ESP32S2 by press and release RST button. Run "Set up USB Game Controller", there should be 'SOI14 USB Hitbox" controller show up on your Installed game controller.
 
 # Connection PINs
 

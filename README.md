@@ -14,7 +14,7 @@ I'm using ESP-IDF V5.0 as a compiler.
 | zebra stripes | are neat      |    $1 |
 
 | Button        | GPIO Number   |
-| ------------- |:-------------:|
-| Up            | 1             |
-| col 2 is      | centered      |
-| zebra stripes | are neat      |
+| :-----------: |:-------------:|
+| UP            | 1             |
+| RIGHT         | 2             |
+| DOWN          | 3             |

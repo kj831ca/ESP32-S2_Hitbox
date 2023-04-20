@@ -17,6 +17,7 @@ python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 4
 
 6. Press and release RST button on ESP32S2 Mini. Run "Set up USB Game Controller", there should be 'SOI14 USB Hitbox" controller show up on your Installed game controller.
 
+# Connection PINs
 
 | Button        | GPIO Number   |
 | :-----------: |:-------------:|

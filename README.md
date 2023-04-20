@@ -15,6 +15,6 @@ I'm using ESP-IDF V5.0 as a compiler.
 
 | Button        | GPIO Number   |
 | ------------- |:-------------:|
-| col 3 is      | right-aligned |
+| Up            | 1             |
 | col 2 is      | centered      |
 | zebra stripes | are neat      |

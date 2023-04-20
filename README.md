@@ -19,6 +19,8 @@ python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 4
 
 # Connection PINs
 
+The push button on of the pins are connected to the ESP32S2 GPIO as the table below and the other pin will shared all the same GND pin of ESP32S2 Mini. 
+
 | Button        | GPIO Number   |
 | :-----------: |:-------------:|
 | UP            | 1             |

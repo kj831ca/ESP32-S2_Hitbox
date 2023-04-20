@@ -3,15 +3,12 @@
 
 # Arcade Joystick (Hitbox Style) using ESP32-S2
 
-I build my own Hitbox Joystick and wrote the firmware ESP32 S2. The normal polling rate of Joystick is around 250Hz (4 milli seconds) with ESP32 S2 I can do close to 1000 Hz which is 1 msec. 
+I build my own Hitbox Joystick and wrote the firmware ESP32S2 Mini board. The normal polling rate of Joystick is around 250Hz (4 milli seconds) with ESP32 S2 I can do close to 1000 Hz which is 1 msec. 
 
-I'm using ESP-IDF V5.0 as a compiler. 
+The compiler for this project is ESP-IDF 5.0. I found that it is a little bit tricky to compile or build the project at first time. There are the BIN files that allow you to flash to ESP32S2 Mini board under /firmware_binary . Here is the command to flash ESP32 S2, you will need to locate the folder where 'esptool.py' is
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+python.exe $env:IDF_PATH\components\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s2  write_flash --flash_mode dio --flash_size 2MB --flash_freq 80m 0x1000 .\bootloader.bin 0x8000 .\partition-table.bin 0x10000 .\esp32s2_hitbox.bin
+
 
 | Button        | GPIO Number   |
 | :-----------: |:-------------:|

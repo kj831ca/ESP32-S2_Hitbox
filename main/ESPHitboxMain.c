@@ -134,10 +134,8 @@ static void JoyPadTask(void *pvParameter)
         TURN_OFF(USB_REPORT_PIN);
         #endif
         
-        vTaskDelayUntil(&prevTick,pdMS_TO_TICKS(1)); //Make sure you set the Free RTOS tick to 1000 Hz in menu config.
-
-        //if((task_cycle % 10) == 0)
-            //esp_task_wdt_reset();
+        //We set the Free RTOS tick to 1000 Hz in menu config.
+        vTaskDelayUntil(&prevTick,pdMS_TO_TICKS(1)); 
     }
 }
 void app_main(void)
@@ -162,22 +160,4 @@ void app_main(void)
 
     xTaskCreate(JoyPadTask,"Joy Stick Polling",4096,NULL,5,NULL);
 
-    /*
-    int task_cycle = 0;
-    //esp_task_wdt_add(NULL);
-    while (1)
-    {
-        task_cycle++;
-        if (tud_mounted())
-        {
-          
-           PollingHitBox();
-           UpdateReport();
-        }
-        vTaskDelay(pdMS_TO_TICKS(1)); //Make sure you set the Free RTOS tick to 1000 Hz in menu config.
-
-        //if((task_cycle % 10) == 0)
-            //esp_task_wdt_reset();
-    }
-    */
 }

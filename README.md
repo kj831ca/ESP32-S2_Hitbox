@@ -17,6 +17,15 @@ python.exe $env:IDF_PATH\components\esptool_py\esptool\esptool.py -p (PORT) -b 4
 
 6. Reset the ESP32S2 by press and release RST button. Run "Set up USB Game Controller", there should be 'SOI14 USB Hitbox" controller show up on your Installed game controller.
 
+# SOCD Function
+The firmware handle the SOCD as follow:
+
+| Combination         | Output       |
+| :------------:      | ------------ |
+| LEFT + RIGHT        | Natural      |
+| UP + DOWN           | UP           |
+| UP+DOWN+LEFT+RIGHT  | Natural      |
+
 # Connection PINs
 
 The push button on of the pins are connected to the ESP32S2 GPIO as the table below and the other pin will shared all the same GND pin of ESP32S2 Mini. 
